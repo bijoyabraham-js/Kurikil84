@@ -1,76 +1,70 @@
-/* Full-width top navbar with translucent blur */
+/* Base navbar */
+/* Base navbar: dark at top */
 .navbar-custom {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 6px 12px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    max-width: 320px;
-    width: auto;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 14px;
-    line-height: 1.6; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4px 8px;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9); /* Darker at top */
+  backdrop-filter: none;
+  box-shadow: none;
+  height: 45px;
 }
 
-  /* Navigation links */
-  .navbar-custom ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-custom li {
-    margin: 0 15px;
-    position: relative;
-  }
-  
-  .navbar-custom a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar-custom a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
-  /* Dropdown menu */
-  .navbar-custom .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    padding: 10px 0;
-    z-index: 1000;
-  }
-  
-  .dropdown-menu li {
-    margin: 0;
-  }
-  
-  .dropdown-menu a {
-    color: white;
-    display: block;
-    padding: 10px 20px;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
+/* Scrolled state: lighter and blurred */
+.navbar-custom.scrolled {
+  background-color: rgba(0, 0, 0, 0.4); /* Lighter */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Container inside navbar */
+.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo a {
+  color: white;
+  font-size: 20px; /* Slightly smaller */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation links */
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Body padding to prevent content overlap */
+body {
+  padding-top: 30px; /* Adjusted for reduced navbar height */
+  margin: 0;
+}

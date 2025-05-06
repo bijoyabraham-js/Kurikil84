@@ -1,15 +1,14 @@
 .spotify-section {
   background-color: #121212;
-  padding: 50px 20px;
+  padding: 50px 5vw; /* Responsive horizontal padding */
   color: #fff;
   text-align: center;
 }
 
 .spotify-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: grid; /* Use grid layout for better control */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts the columns automatically */
+  gap: 30px; /* Space between the cards */
   margin-top: 30px;
 }
 
@@ -17,7 +16,6 @@
   background-color: #1e1e1e;
   border-radius: 16px;
   overflow: hidden;
-  width: 280px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
 }
@@ -51,4 +49,23 @@
 .song-info audio {
   width: 100%;
   margin-top: 10px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 600px) {
+  .spotify-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 songs per row for medium screens */
+  }
+}
+
+@media (min-width: 900px) {
+  .spotify-cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 songs per row for large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .spotify-cards {
+    grid-template-columns: repeat(6, 1fr); /* 6 songs per row for very large screens */
+  }
 }
