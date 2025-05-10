@@ -1,43 +1,74 @@
-.gallery-container {
-    text-align: center;
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  
-  .swipe-stack {
-    position: relative;
-    height: 400px; /* You can adjust the height */
-  }
-  
-  .swipe-card {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
-    cursor: grab;
-    position: absolute;
-  }
-  
-  .gallery-indicator {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .gallery-indicator span {
-    width: 10px;
-    height: 10px;
-    background: #aaa;
-    border-radius: 50%;
+/* Banner Container */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fade 1s ease-in-out;
+  transition: background-image 1.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* Fade animation */
+@keyframes fade {
+  from {
     opacity: 0.5;
   }
-  
-  .gallery-indicator span.active {
-    background: #333;
+  to {
     opacity: 1;
   }
-  
+}
+
+/* Arrow Buttons */
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.banner-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffd700;
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
+
+/* Responsive Heights */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 50vh;
+  }
+
+  .banner-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+}

@@ -1,71 +1,58 @@
+/* Songs.css */
 .spotify-section {
   background-color: #121212;
-  padding: 50px 5vw; /* Responsive horizontal padding */
+  padding: 50px 5vw;
   color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.spotify-section h2 {
   text-align: center;
+  color: #1db954;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .spotify-cards {
-  display: grid; /* Use grid layout for better control */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts the columns automatically */
-  gap: 30px; /* Space between the cards */
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-content: center;
 }
 
 .spotify-card {
   background-color: #1e1e1e;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .spotify-card:hover {
-  transform: scale(1.03);
-}
-
-.spotify-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .song-info {
-  padding: 15px;
-  text-align: left;
+  flex: 1;
 }
 
 .song-info h4 {
-  margin: 5px 0;
-  font-size: 1.2rem;
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .song-info p {
-  margin: 0;
-  font-size: 0.9rem;
+  margin: 0 0 10px;
+  font-size: 0.85rem;
   color: #b3b3b3;
 }
 
-.song-info audio {
+audio {
   width: 100%;
-  margin-top: 10px;
-}
-
-/* Responsive tweaks */
-@media (min-width: 600px) {
-  .spotify-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 songs per row for medium screens */
-  }
-}
-
-@media (min-width: 900px) {
-  .spotify-cards {
-    grid-template-columns: repeat(3, 1fr); /* 3 songs per row for large screens */
-  }
-}
-
-@media (min-width: 1200px) {
-  .spotify-cards {
-    grid-template-columns: repeat(6, 1fr); /* 6 songs per row for very large screens */
-  }
+  outline: none;
 }
