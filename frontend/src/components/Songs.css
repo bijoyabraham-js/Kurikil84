@@ -1,58 +1,59 @@
-/* Songs.css */
 .spotify-section {
-  background-color: #121212;
-  padding: 50px 5vw;
-  color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.spotify-section h2 {
+  padding: 40px 20px;
+  background: black;
   text-align: center;
-  color: #1db954;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
 }
 
-.spotify-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 20px;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
 }
 
 .spotify-card {
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  background: black;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
-.spotify-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+.nav-button {
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
 }
 
-.song-info {
-  flex: 1;
+.nav-button:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
-.song-info h4 {
-  margin: 0 0 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
+.dots {
+  margin-top: 15px;
 }
 
-.song-info p {
-  margin: 0 0 10px;
-  font-size: 0.85rem;
-  color: #b3b3b3;
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
-audio {
-  width: 100%;
-  outline: none;
+.dot.active {
+  background-color: #333;
 }

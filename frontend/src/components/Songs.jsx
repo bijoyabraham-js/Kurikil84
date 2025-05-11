@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Songs.css';
 
-// Sample data for 18 songs
 const songs = [
   { title: 'Midnight Chill', artist: 'DJ LoFi', src: '/path/to/song1.mp3' },
   { title: 'Echoes of Vinyl', artist: 'The Classics', src: '/path/to/song2.mp3' },
@@ -23,22 +22,62 @@ const songs = [
   { title: 'Nightfall Dreams', artist: 'Lofi Soundscapes', src: '/path/to/song18.mp3' },
 ];
 
+const chunkArray = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
+
 function Songs() {
+  const chunks = chunkArray(songs, 5);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const goToSlide = (index) => {
+    if (index >= 0 && index < chunks.length) setCurrentSlide(index);
+  };
+
   return (
     <section className="spotify-section">
-      <h2>Listen to Our Tracks</h2>
-      <div className="spotify-cards">
-        {songs.map((song, index) => (
-          <div key={index} className="spotify-card">
-            <div className="song-info">
-              <h4>{song.title}</h4>
-              <p>{song.artist}</p>
-              <audio controls>
-                <source src={song.src} type="audio/mp3" />
-                Your browser does not support the audio element.
-              </audio>
+      <h2 style={{color:'red'}}>Listen to Our Tracks</h2>
+      <div className="carousel-wrapper">
+        <button
+          className="nav-button"
+          onClick={() => goToSlide(currentSlide - 1)}
+          disabled={currentSlide === 0}
+        >
+          ‹
+        </button>
+
+        <div className="carousel-slide">
+          {chunks[currentSlide].map((song, i) => (
+            <div key={i} className="spotify-card">
+              <div className="song-info">
+                <h4>{song.title}</h4>
+                <p>{song.artist}</p>
+                <audio controls>
+                  <source src={song.src} type="audio/mp3" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <button
+          className="nav-button"
+          onClick={() => goToSlide(currentSlide + 1)}
+          disabled={currentSlide === chunks.length - 1}
+        >
+          ›
+        </button>
+      </div>
+
+      <div className="dots">
+        {chunks.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentSlide ? 'active' : ''}`}
+            onClick={() => goToSlide(index)}
+          ></span>
         ))}
       </div>
     </section>

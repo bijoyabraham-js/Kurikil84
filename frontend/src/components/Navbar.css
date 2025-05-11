@@ -68,3 +68,9 @@ body {
   padding-top: 30px; /* Adjusted for reduced navbar height */
   margin: 0;
 }
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  color: white; /* Or any text color you want */
+  cursor: pointer;
+}
