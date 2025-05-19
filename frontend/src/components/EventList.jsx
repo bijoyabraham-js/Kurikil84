@@ -2,21 +2,13 @@ import React from "react";
 import "./EventList.css";
 
 const events = [
-  {
-    title: "Kurikil Live Concert",
-    venue: "Lulu Mall, Kochi",
-    time: "2025-05-20 7:00 PM",
-  },
+  
   {
     title: "Fusion Jam",
     venue: "Marine Drive Amphitheatre",
     time: "2025-06-01 6:30 PM",
   },
-  {
-    title: "Rock Night",
-    venue: "Bolgatty Palace",
-    time: "2025-06-10 8:00 PM",
-  },
+
 ];
 
 function EventList() {

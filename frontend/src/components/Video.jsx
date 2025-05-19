@@ -23,7 +23,7 @@ function Video() {
   return (
     <section className="video-section">
       <div className="video-overlay">
-        <h2 style={{color: 'black'}}>Watch Our Highlight</h2>
+        <h2 style={{color: 'red'}}>Watch Our Highlight</h2>
         <div className="video-container">
           <iframe
             src={videos[currentIndex]}
