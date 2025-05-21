@@ -7,6 +7,7 @@ import Songs from '../components/Songs';
 import Video from '../components/Video';
 import EventList from '../components/EventList';
 import Spring3DCarousel from '../components/Album';
+import SpotifyEmbed from '../components/SpotifyEmbed';
 
 function Home() {
   const homeRef = useRef(null);
@@ -36,7 +37,8 @@ function Home() {
         <Product />
       </section>
       <section ref={songsRef}>
-        <Songs />
+        {/* <Songs /> */}
+        <SpotifyEmbed/>
       </section>
       <section ref={videoRef}>
       <Video />
