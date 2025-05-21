@@ -18,19 +18,19 @@ function Footer() {
                 <p>
                   A108 Adam Street<br />
                   NY 535022, Kochi<br /><br />
-                  <strong>Phone:</strong> +1 5589 55488 55<br />
-                  <strong>Email:</strong> info@example.com<br />
+                  <strong>Phone:</strong> +1 5589 Need to change<br />
+                  <strong>Email:</strong> kurikil84@gmail.com<br />
                 </p>
                 <div className="social-links">
-                  <a href="#"><i className="bx bxl-twitter" /></a>
-                  <a href="#"><i className="bx bxl-facebook" /></a>
-                  <a href="#"><i className="bx bxl-instagram" /></a>
-                  <a href="#"><i className="bx bxl-skype" /></a>
-                  <a href="#"><i className="bx bxl-linkedin" /></a>
+                  {/* <a href="#"><i className="bx bxl-twitter" /></a> */}
+                  {/* <a href="#"><i className="bx bxl-facebook" /></a> */}
+                  <a href="https://www.instagram.com/iam_e3y/"><i className="bx bxl-instagram" /></a>
+                  <a href="https://www.youtube.com/channel/UCKCtNh6KJ8oeVAl3h3Nz5-g"><i className="bx bxl-youtube" /></a>
+                  <a href="https://open.spotify.com/artist/1kfF1kkbyruQ6Abd540tNL"><i className="bx bxl-spotify" /></a>
                 </div>
               </div>
 
-              <div className="footer-links">
+              <div className="footer-links mobile-hide">
                 <h4>Useful Links</h4>
                 <ul>
                   <li><i className="bx bx-chevron-right" /> <a href="#">Home</a></li>

@@ -4,9 +4,9 @@ import "./EventList.css";
 const events = [
   
   {
-    title: "Fusion Jam",
-    venue: "Marine Drive Amphitheatre",
-    time: "2025-06-01 6:30 PM",
+    title: "Canvas of Hope",
+    venue: "Avenue Center Mananthala",
+    time: "2025-05-24 5:30 PM",
   },
 
 ];

@@ -1,56 +1,80 @@
 import React from 'react';
 import './Product.css';
-import casette from '../assets/casette.jpg';
-import mic from '../assets/mic.jpg';
-import guitar from '../assets/guitar.jpg';
-import remix from '../assets/remix.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import tshirt1 from '../assets/ts1.webp';
+import tshirt2 from '../assets/ts2.webp';
+import tshirt3 from '../assets/ts3.webp';
+import tshirt4 from '../assets/ts4.webp';
+import tshirt5 from '../assets/ts5.webp';
 
 const products = [
   {
-    title: 'Retro Cassette',
-    description: 'Classic audio with vintage charm.',
-    image: casette
+    title: 'T-Shirt 1',
+    description: 'Echo the vibe. Wear Kurikil.',
+    image: tshirt1,
   },
   {
-    title: 'Electric Guitar',
-    description: 'Rock your world with clean tones.',
-    image: guitar
+    title: 'T-Shirt 2',
+    description: 'Echo the vibe. Wear Kurikil.',
+    image: tshirt2,
   },
   {
-    title: 'Studio Mic',
-    description: 'Perfect vocals with studio precision.',
-    image: mic
+    title: 'T-Shirt 3',
+    description: 'Echo the vibe. Wear Kurikil.',
+    image: tshirt3,
   },
   {
-    title: 'DJ Remix Set',
-    description: 'Mix beats like a pro.',
-    image: remix
-  }
+    title: 'T-Shirt 4',
+    description: 'Echo the vibe. Wear Kurikil.',
+    image: tshirt4,
+  },
+  {
+    title: 'T-Shirt 5',
+    description: 'Echo the vibe. Wear Kurikil.',
+    image: tshirt5,
+  },
 ];
 
 function Product() {
   return (
     <section className="product-section">
       <h2 className="section-title">Our Products</h2>
-      <div className="product-grid">
+      <Swiper
+        modules={[Navigation, Pagination]}
+        spaceBetween={20}
+        navigation
+        pagination={{ clickable: true }}
+        breakpoints={{
+          0: { slidesPerView: 1 },        // Mobile
+          768: { slidesPerView: 2 },      // Tablet
+          1024: { slidesPerView: 4 },     // Desktop
+        }}
+      >
         {products.map((product, index) => (
-          <div className="product-card" key={index}>
-            <img src={product.image} alt={product.title} />
-            <div className="product-info">
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-              <a
-                className="buy-button"
-                href={`https://wa.me/919876543210?text=Hi, I am interested in buying the ${encodeURIComponent(product.title)}.`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy Now
-              </a>
+          <SwiperSlide key={index}>
+            <div className="product-card">
+              <img src={product.image} alt={product.title} />
+              <div className="product-info">
+                <h3>{product.title}</h3>
+                <p>{product.description}</p>
+                <a
+                  className="buy-button"
+                  href={`https://wa.me/919876543210?text=Hi, I am interested in buying the ${encodeURIComponent(product.title)}.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy Now
+                </a>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </section>
   );
 }

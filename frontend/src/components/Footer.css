@@ -1,4 +1,141 @@
+/* Footer Base Styling */
 #footer {
+  background: #1f1f1f;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-top {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-brand .brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-info strong {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #f39c12;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-links i {
+  margin-right: 8px;
+  color: #f39c12;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ----------------------------- */
+/* Responsive Styles for Desktop */
+/* ----------------------------- */
+@media (min-width: 768px) {
+  .footer-columns {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    flex: 1;
+  }
+
+  .footer-content {
+    flex: 3;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-info,
+  .footer-links {
+    flex: 1;
+  }
+
+/* Force hide this block on mobile view */
+.footer-links.mobile-hide {
+  display: none !important;
+}
+
+/* Show again on tablet and desktop (768px and up) */
+@media (min-width: 768px) {
+  .footer-links.mobile-hide {
+    display: block !important;
+  }
+}
+
+}
+
+
+
+
+
+/* #footer {
   background: #111;
   color: #eee;
   padding: 40px 20px 20px;
@@ -119,4 +256,4 @@
   .footer-brand {
     text-align: center;
   }
-}
+} */

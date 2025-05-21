@@ -2,12 +2,14 @@ import Carousel from "react-spring-3d-carousel";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
-import img1 from '../assets/casette.jpg';
-import img2 from '../assets/mic.jpg';
-import img3 from '../assets/guitar.jpg';
-import img4 from '../assets/remix.jpg';
+import img1 from '../assets/g1.webp';
+import img2 from '../assets/g2.webp';
+import img3 from '../assets/g3.webp';
+import img4 from '../assets/g4.webp';
+import img5 from '../assets/g5.webp';
+import img6 from '../assets/g6.webp';
 
-const images = [img1, img2, img3, img4];
+const images = [img1, img2, img3, img4,img5,img6];
 
 export default function Spring3DCarousel() {
   const [goToSlide, setGoToSlide] = useState(0);
