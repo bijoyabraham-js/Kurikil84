@@ -50,7 +50,7 @@ export default function Spring3DCarousel() {
       <h2
         style={{
           fontSize: "clamp(1.5rem, 2vw + 1rem, 2.5rem)",
-          marginBottom: "2rem",
+          marginBottom: "2rem",color:'red'
         }}
       >
         Band Gallery
