@@ -16,7 +16,7 @@ function Footer() {
             <div className="footer-content">
               <div className="footer-info">
                 <p>
-                  <br /><br />
+                  <br />
                   <strong>Phone:</strong> +91 9633642123<br />
                   <strong>Email:</strong> kurikil84@gmail.com<br />
                 </p>
@@ -34,9 +34,9 @@ function Footer() {
                 <ul>
                   <li><i className="bx bx-chevron-right" /> <a href="#">Home</a></li>
                   <li><i className="bx bx-chevron-right" /> <a href="/aboutus">About us</a></li>
-                  <li><i className="bx bx-chevron-right" /> <a href="#">Services</a></li>
-                  <li><i className="bx bx-chevron-right" /> <a href="#">Terms of service</a></li>
-                  <li><i className="bx bx-chevron-right" /> <a href="#">Privacy policy</a></li>
+                  {/* <li><i className="bx bx-chevron-right" /> <a href="#">Services</a></li> */}
+                  {/* <li><i className="bx bx-chevron-right" /> <a href="#">Terms of service</a></li> */}
+                  {/* <li><i className="bx bx-chevron-right" /> <a href="#">Privacy policy</a></li> */}
                 </ul>
               </div>
             </div>
