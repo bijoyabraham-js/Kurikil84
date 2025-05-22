@@ -3,9 +3,9 @@ import './Video.css';
 
 function Video() {
   const videos = [
-    "https://youtube.com/embed/ipbbU30aUlo?si=7Mc6iXGAHzNs9gd5", 
-    "https://www.youtube.com/embed/Yqf_CMcnWco",
-    "https://www.youtube.com/embed/rmGsvSqCsp0"
+    "https://www.youtube.com/embed/EDo1ehOMYXo", 
+    "https://www.youtube.com/embed/rmGsvSqCsp0",
+    "https://www.youtube.com/embed/_lV55GSlyCo"
   ];
 
 
@@ -23,7 +23,7 @@ function Video() {
   return (
     <section className="video-section">
       <div className="video-overlay">
-        <h2 style={{color: 'red'}}>Watch Our Highlight</h2>
+        <h2 style={{color: 'white'}}>Watch Our Highlight</h2>
         <div className="video-container">
           <iframe
             src={videos[currentIndex]}

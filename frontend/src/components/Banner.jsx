@@ -1,6 +1,6 @@
 import React from "react";
 import './Banner.css';
-import band from "../assets/frontCover.webp";
+import band from "../assets/cover_compressed.webp";
 
 function Banner() {
   const backgroundImageStyle = {
@@ -14,13 +14,15 @@ function Banner() {
       <div className="about-section">
         <h2 className="about-title">About Kurikil</h2>
         <p className="about-text">
-          Kurikil '84 started as a spark—three artists trying to make room for others like them. It’s a space built by artists, for artists. 
-          A place where expression isn’t just welcomed, it’s celebrated.
-          We’re here for the quiet sketches, the midnight melodies, the shaky first takes and the stories that don’t always get told. 
-          Because we believe it’s the little things that matter. No piece of art is ever too small to be meaningful.
-          At the heart of it all is community—people who show up for each other, lift each other, and grow together. 
-          This is our safe space. Our soundboard. Our shared canvas. <br />
-          Kurikil '84 ,where art meets heart. And everyone’s invited.
+          Kurikil '84 is not a band.
+It’s a collective of creative people,
+Artists, musicians, storytellers,
+who dream of growing together and helping others rise too.
+We started with just three friends who wanted to make space for people like us. 
+A place where anyone can share their work, find support, and feel seen.
+We believe every idea matters, whether it’s a rough sketch, a late-night melody, or a small story that means a lot.
+At the core, Kurikil is about community. We lift each other up, fly together, and reach for the skies,
+not alone, but side by side.
         </p>
       </div>
     </div>

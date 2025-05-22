@@ -8,8 +8,9 @@ import img3 from '../assets/g3.webp';
 import img4 from '../assets/g4.webp';
 import img5 from '../assets/g5.webp';
 import img6 from '../assets/g6.webp';
+import img7 from '../assets/e3y.webp';
 
-const images = [img1, img2, img3, img4,img5,img6];
+const images = [img7, img1, img2, img3, img4,img5,img6];
 
 export default function Spring3DCarousel() {
   const [goToSlide, setGoToSlide] = useState(0);
@@ -52,7 +53,7 @@ export default function Spring3DCarousel() {
       <h2
         style={{
           fontSize: "clamp(1.5rem, 2vw + 1rem, 2.5rem)",
-          marginBottom: "2rem",color:'red'
+          marginBottom: "2rem",color:'white'
         }}
       >
         Band Gallery

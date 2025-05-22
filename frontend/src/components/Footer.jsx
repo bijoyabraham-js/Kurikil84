@@ -9,16 +9,15 @@ function Footer() {
           <div className="footer-columns">
             {/* Brand Name */}
             <div className="footer-brand">
-              <h3 className="brand-name">Kurukil</h3>
+              <h3 className="brand-name">Kurikil</h3>
             </div>
 
             {/* Contact and Links */}
             <div className="footer-content">
               <div className="footer-info">
                 <p>
-                  A108 Adam Street<br />
-                  NY 535022, Kochi<br /><br />
-                  <strong>Phone:</strong> +1 5589 Need to change<br />
+                  <br /><br />
+                  <strong>Phone:</strong> +91 9633642123<br />
                   <strong>Email:</strong> kurikil84@gmail.com<br />
                 </p>
                 <div className="social-links">
