@@ -14,7 +14,7 @@ function Banner() {
       <div className="about-section">
         <h2 className="about-title">About Kurikil</h2>
         <p className="about-text">
-          Kurikil '84 is not a band.
+          Kurikil84 is not a band.
 It’s a collective of creative people,
 Artists, musicians, storytellers,
 who dream of growing together and helping others rise too.
