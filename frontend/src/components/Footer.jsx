@@ -46,7 +46,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <div className="copyright">
-          © Copyright <strong><span>Kurukil</span></strong>. All Rights Reserved
+          © Copyright <strong><span>Kurikil</span></strong>. All Rights Reserved
         </div>
       </div>
     </footer>
