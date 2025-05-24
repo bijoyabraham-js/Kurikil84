@@ -1,42 +1,51 @@
 /* Banner Container */
 .banner-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: fade 1s ease-in-out;
-    transition: background-image 1.5s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  body {
-    margin: 0;
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
-  }
-  
-  .typing-text {
-    color: white;
-    font-size: 2rem;
-    font-family: 'Courier New', monospace;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: add readability */
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 90%;
-  }
-  /* About Section Styling */
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fade 1s ease-in-out;
+  transition: background-image 1.5s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 0;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+.typing-text {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Courier New', monospace;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: add readability */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 90%;
+}
+
+/* About Section Styling */
 .about-section {
-  padding: 40px 20px;
+  padding: 20px 20px 40px; /* reduced top padding */
+  max-width: 1000px;
+  margin: -20px auto 0; /* pull section closer to banner */
+  color: white;
+
+  /* padding: 40px 20px;
   max-width: 1000px;
   margin: 0 auto;
-  color: white;
+  color: white; */
 }
 
 .about-title {
@@ -51,66 +60,139 @@
   font-size: 1.1rem;
   text-align: justify;
 }
-  
-  /* Fade animation */
-  @keyframes fade {
-    from {
-      opacity: 0.5;
-    }
-    to {
-      opacity: 1;
-    }
+
+/* Fade animation */
+@keyframes fade {
+  from {
+    opacity: 0.5;
   }
-  
-  /* Arrow Buttons */
+  to {
+    opacity: 1;
+  }
+}
+
+/* Arrow Buttons */
+.banner-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.banner-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffd700;
+}
+
+.prev {
+  left: 16px;
+}
+
+.next {
+  right: 16px;
+}
+
+/* Responsive Heights and Image Display */
+@media (max-width: 768px) {
+  .banner-container {
+    background-size: contain;
+    background-position: top center;
+    height: 75vh;
+  }
+
+  .about-section {
+    padding-top: 10px;
+    margin-top: -30px;
+    
+    /* padding-top: 20px;
+    margin-top: -20px; Reduce space between banner and text */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    background-size: contain;
+    background-position: top center;
+    height: 65vh;
+  }
+
   .banner-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .about-section {
+    padding-top: 5px;
+    margin-top: -35px;
+
+
+    /* padding-top: 10px;
+    margin-top: -20px; */
+  }
+}
+
+@media (max-width: 430px) {
+  .banner-container {
+    height: 55vh; /* Slightly less height for the image */
+    margin-bottom: 0;
+  }
+
+  .about-section {
+    padding-top: 10px;
+    margin-top: -40px; /* Pull section closer */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    height: auto;
+    aspect-ratio: 4 / 3; /* Ensures image shows clearly */
+    background-size: contain;
+    background-position: top center;
+    margin-bottom: 0;
+  }
+
+  .about-section {
+    padding-top: 10px;
+    margin-top: -30px; /* Pulls section up closer to the image */
+  }
+}
+@media (max-width: 767px) {
+  .banner-container {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+
+  .about-section {
+    padding-top: 10px;
+    margin-top: -40px; /* Pulls "About" closer to image */
+  }
+
+  .banner-container::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 48px;
-    height: 48px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+    z-index: 1;
   }
-  
-  .banner-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ffd700;
-  }
-  
-  .prev {
-    left: 16px;
-  }
-  
-  .next {
-    right: 16px;
-  }
-  
-  /* Responsive Heights */
-  @media (max-width: 768px) {
-    .banner-container {
-      height: 60vh;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .banner-container {
-      height: 50vh;
-    }
-  
-    .banner-arrow {
-      width: 36px;
-      height: 36px;
-      font-size: 20px;
-    }
-  }
-  
+}
