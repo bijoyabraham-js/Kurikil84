@@ -64,7 +64,7 @@ function Product() {
                 <p>{product.description}</p>
                 <a
                   className="buy-button"
-                  href={`https://wa.me/8075949498?text=Hi, I am interested in buying the ${encodeURIComponent(product.title)}.`}
+                  href={`https://wa.me/918075949498?text=Hi, I am interested in buying the ${encodeURIComponent(product.title)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
