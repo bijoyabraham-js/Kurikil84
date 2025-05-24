@@ -18,18 +18,20 @@ export default function Spring3DCarousel() {
   const slides = images.map((img, index) => ({
     key: uuidv4(),
     content: (
-      <img
-        src={img}
-        alt={`img-${index}`}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          borderRadius: "12px",
-          boxShadow: "0 8px 16px rgba(0,0,0,0.3)",
-        }}
-      />
-    ),
+  <img
+    src={img}
+    alt={`img-${index}`}
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "contain", // Changed from "cover" to "contain"
+      objectPosition: "center", // Optional: centers image
+      borderRadius: "12px",
+      boxShadow: "0 8px 16px rgba(0,0,0,0.3)",
+    }}
+  />
+),
+
     onClick: () => setGoToSlide(index),
   }));
 
@@ -69,12 +71,12 @@ export default function Spring3DCarousel() {
         }}
       >
         <Carousel
-          slides={slides}
-          goToSlide={goToSlide}
-          offsetRadius={2}
-          showNavigation={false}
-          animationConfig={{ tension: 120, friction: 14 }}
-        />
+  slides={slides}
+  goToSlide={goToSlide}
+  offsetRadius={2}
+  showNavigation={false}
+  animationConfig={{ tension: 250, friction: 18 }} // Faster & snappier
+/>
 
         {/* Custom Nav Buttons */}
         <button
